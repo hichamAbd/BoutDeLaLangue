@@ -19,6 +19,7 @@ export function bienvenue(vue, suite) {
 
   const lettre = () => {
     clear(vue);
+    document.body.classList.remove('sur-couverture');
     const ouvrir = h('button.btn.primaire', { type: 'button' }, 'Voir le défi du jour');
     ouvrir.addEventListener('click', () => {
       etat.get().accueilVu = true;
@@ -27,7 +28,7 @@ export function bienvenue(vue, suite) {
     });
     vue.append(
       h(
-        'div.page.lettre',
+        'div.page.courrier',
         h('p.cursive.lettre-debut', `${NOM},`),
         h('p.cursive.lettre-phrase', "tu m'as appris mes premiers mots. À mon tour de t'aider à retrouver les tiens."),
         h('p', "Ton français n'est pas parti. Il est juste un peu endormi, et ce cahier est là pour le réveiller en douceur."),

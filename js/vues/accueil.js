@@ -126,8 +126,8 @@ export function accueil(vue) {
         semaine(s.jours),
         h(
           'p.compteurs',
-          h('span', sr > 1 ? `Série : ${sr} jours` : sr === 1 ? 'Série : 1 jour' : 'Ta série commence aujourd\'hui'),
-          h('span', `${s.points} ${s.points > 1 ? 'bons points' : 'bon point'}`),
+          h('span', sr > 1 ? `Série : ${sr} jours` : sr === 1 ? 'Série : 1 jour' : "Ta série commence aujourd'hui."),
+          s.points > 0 && h('span', `${s.points} ${s.points > 1 ? 'bons points' : 'bon point'}`),
         ),
       ),
 

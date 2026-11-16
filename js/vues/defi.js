@@ -1,6 +1,6 @@
 // Le défi du jour, puis la page de résultat avec le tampon.
 
-import { h, clear, go, now, dateCourte, pickOne, hash32, mulberry32 } from '../outils.js';
+import { h, clear, go, now, dateTampon, dateOf, pickOne, hash32, mulberry32 } from '../outils.js';
 import * as etat from '../etat.js';
 import { defiDuJour, questionsDuDefi, repondreDefi, terminerDefi, POINTS_PAR_IMAGE, imagesGagnees } from '../moteur.js';
 import { lancerSerie } from '../serie.js';
@@ -39,6 +39,7 @@ function relecture(d, items) {
         it.type === 'faute' && h('p.rappel-question', { rich: it.p }),
         rep && !rep.ok && rep.c && h('p.ta-reponse', 'Ta réponse : ', h('s', rep.c)),
         juste && h('div.phrase-juste', h('p', { rich: juste }), boutonEcouter(juste, 'Écouter la phrase')),
+        !juste && it.type === 'qcm' && h('p.bonne-reponse', 'Bonne réponse : ', h('b', { rich: it.o[0] })),
         h('p.explication', { rich: it.e }),
       ),
     );
@@ -58,7 +59,7 @@ function resultat(vue, d, r) {
   const reste = POINTS_PAR_IMAGE - (s.points % POINTS_PAR_IMAGE);
   const collectionFinie = imagesGagnees() >= IMAGES_ORDINAIRES.length;
 
-  const zoneTampon = h('div.tampon' + (r.deja ? '' : '.frappe'), { svg: tampon(dateCourte(now())) });
+  const zoneTampon = h('div.tampon' + (r.deja ? '' : '.frappe'), { svg: tampon(dateTampon(dateOf(d.date))) });
   const details = h('div.relecture-zone', { hidden: true });
   const voir = h('button.btn.secondaire', { type: 'button', 'aria-expanded': 'false' }, 'Revoir mes réponses');
   voir.addEventListener('click', () => {
@@ -123,7 +124,7 @@ export function defi(vue) {
     items,
     depart: premier,
     etats: items.map((it) => (d.rep[it.id] ? d.rep[it.id].ok : null)),
-    titre: d.titre,
+    titre: 'Défi du jour',
     quitter: () => go(''),
     surReponse: (it, ok, choix) => repondreDefi(it, ok, choix),
     surFin: () => {

@@ -231,7 +231,7 @@ export function reglages(vue) {
         h('h2.sous-titre', 'À propos'),
         h('p', `Sur le bout de la langue, version ${VERSION}. ${total()} questions, phrases et mots dans le cahier.`),
         h('p', "Rien n'est envoyé nulle part : pas de compte, pas de publicité, pas de suivi. L'appli fonctionne sans connexion."),
-        h('p', 'Écriture : Borel, de Rosalie Wagner. Texte : Atkinson Hyperlegible Next, du Braille Institute. Polices libres (licence SIL OFL).'),
+        h('p', 'Écriture : Borel, de Rosalie Wagner. Texte : Atkinson Hyperlegible Next, du Braille Institute, avec un zéro redessiné. Polices libres (licence SIL OFL).'),
       ),
     ),
   );

@@ -96,7 +96,7 @@ export function cahier(vue) {
       h('h1.titre', 'Mon cahier'),
       h(
         'div.chiffres',
-        h('p', h('b', String(serie())), h('span', 'jours de série')),
+        h('p', h('b', String(serie())), h('span', serie() > 1 ? 'jours de série' : 'jour de série')),
         h('p', h('b', String(tot.jours)), h('span', tot.jours > 1 ? 'pages faites' : 'page faite')),
         h('p', h('b', String(s.points)), h('span', 'bons points')),
       ),

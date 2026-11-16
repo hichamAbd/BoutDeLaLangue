@@ -134,7 +134,7 @@ export const CATEGORIES = {
   fam: 'Français de tous les jours',
   usage: 'Bon usage',
   oral: "À l'oral",
-  expr: 'Expression',
+  expr: 'Expressions',
   faute: 'Trouve la faute',
   ordre: "Dans l'ordre",
   sit: 'En situation',
@@ -143,7 +143,7 @@ export const CATEGORIES = {
 };
 
 // Catégories proposées dans « Par thème ».
-export const THEMES = ['conj', 'gram', 'orth', 'voc', 'expr', 'fam', 'usage', 'oral'];
+export const THEMES = ['conj', 'gram', 'orth', 'voc', 'expr', 'fam', 'usage', 'oral', 'ordre'];
 
 export const INTRO_THEMES = {
   conj: 'Subjonctif, conditionnel, impératif : les formes qui font hésiter.',
@@ -154,4 +154,5 @@ export const INTRO_THEMES = {
   fam: 'Ce qu\'on entend dans la rue, au travail, en famille.',
   usage: 'Les formules et les politesses de la vie courante.',
   oral: 'Liaisons, lettres muettes, prononciations piégeuses.',
+  ordre: 'Remettre à leur place les petits mots d\'une phrase : le, lui, en, y, ne, pas.',
 };

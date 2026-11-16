@@ -9,7 +9,7 @@ const FICHIERS = [
   'index.html',
   'manifest.webmanifest',
   'css/app.css',
-  'fonts/atkinson-hyperlegible-next.woff',
+  'fonts/atkinson-cahier.woff',
   'fonts/borel.woff',
   'icons/favicon.svg',
   'icons/icon-192.png',

@@ -49,6 +49,9 @@ export function lancerSerie({ racine, items, depart = 0, etats = [], titre = '',
     numero.textContent = String(index + 1);
     monterQuestion(zone, barre, item, {
       dernier: index === items.length - 1,
+      verdict: (ok) => {
+        cases[index].className = ok ? 'ok' : 'ko';
+      },
       fin: ({ ok, choix }) => {
         resultats[index] = ok;
         if (surReponse) surReponse(item, ok, choix);

@@ -39,7 +39,7 @@ export function phraseJuste(item) {
   if (item.q && TROU.test(item.q)) return item.q.replace(TROU, item.o[0]);
   if (item.ex) return item.ex;
   // Une réponse qui est une phrase entière (elle finit par un point) mérite d'être relue et écoutée.
-  if (item.dit || /[.!?…]$/.test(item.o[0])) return item.o[0];
+  if (/[.!?…]$/.test(item.o[0])) return item.o[0];
   return null;
 }
 
@@ -57,7 +57,7 @@ function enonce(item, rempli) {
 
 // Monte la question dans `zone`. Le bouton d'action (Valider puis Suivant) va dans `barre`.
 // `fin({ ok, choix })` est appelé quand elle passe à la suite.
-export function monterQuestion(zone, barre, item, { fin, dernier = false } = {}) {
+export function monterQuestion(zone, barre, item, { fin, verdict, dernier = false } = {}) {
   taire();
   clear(zone);
   clear(barre);
@@ -77,6 +77,7 @@ export function monterQuestion(zone, barre, item, { fin, dernier = false } = {})
 
   function reveler(ok, choix, remarque) {
     termine = true;
+    if (verdict) verdict(ok);
     const juste = phraseJuste(item);
     const panneau = h(
       'section.correction' + (ok ? '.ok' : '.ko'),

@@ -1,0 +1,11 @@
+Polices de l'appli (licence SIL Open Font License 1.1, textes joints)
+
+borel.woff
+  Borel, par Rosalie Wagner. https://github.com/RosaWagner/Borel
+  Réduite aux caractères du français.
+
+atkinson-cahier.woff
+  Atkinson Hyperlegible Next, par le Braille Institute. https://github.com/googlefonts/atkinson-hyperlegible-next
+  Réduite aux caractères du français, et MODIFIÉE : le zéro n'est plus barré.
+  La modification est faite par tools/police-zero.py (le contre-poinçon du zéro est redessiné à chaque graisse).
+  Le nom interne de la police porte la mention « Cahier ».

@@ -106,7 +106,7 @@ export function guirlande() {
   const fanions = points
     .map(([x, y], i) => `<path class="fanion f${(i % 5) + 1}" d="M${x - 11} ${y - 1}L${x + 11} ${y - 1}L${x} ${y + 23}z"/>`)
     .join('');
-  return `<svg class="guirlande" viewBox="0 0 360 54" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">${fanions}<path class="ficelle" fill="none" stroke-linecap="round" d="M0 4Q90 48 180 10T360 4"/></svg>`;
+  return `<svg class="guirlande" viewBox="0 0 360 54" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">${fanions}<path class="ficelle" fill="none" stroke-linecap="round" d="M0 4Q90 48 180 10Q270 48 360 4"/></svg>`;
 }
 
 // Tampon « VU » avec la date, comme sur une copie.
@@ -115,9 +115,9 @@ export function tampon(ligne) {
 }
 
 export function grandGateau() {
-  return `<svg class="grand-dessin" viewBox="0 0 160 130" width="160" height="130" ${TRAIT} stroke-width="3" aria-hidden="true" focusable="false"><path d="M22 122V84h116v38zM22 102c12 9 19-9 31 0s19-9 31 0 19-9 31 0 15-6 23-3M38 84V58h84v26M38 70c10 7 16-7 26 0s16-7 26 0 16-7 26 0 4 2 6 2"/><path d="M56 58V42M80 58V42M104 58V42"/><path class="coloriage" d="M56 36c-4-6 0-8 0-12 4 4 4 8 0 12zM80 36c-4-6 0-8 0-12 4 4 4 8 0 12zM104 36c-4-6 0-8 0-12 4 4 4 8 0 12z"/></svg>`;
+  return `<svg class="grand-dessin gateau" viewBox="0 0 160 130" width="160" height="130" ${TRAIT} stroke-width="3" aria-hidden="true" focusable="false"><path d="M22 122V84h116v38zM22 102c12 9 19-9 31 0s19-9 31 0 19-9 31 0 15-6 23-3M38 84V58h84v26M38 70c10 7 16-7 26 0s16-7 26 0 16-7 26 0 4 2 6 2"/><path d="M56 58V42M80 58V42M104 58V42"/><path class="coloriage" d="M56 36c-4-6 0-8 0-12 4 4 4 8 0 12zM80 36c-4-6 0-8 0-12 4 4 4 8 0 12zM104 36c-4-6 0-8 0-12 4 4 4 8 0 12z"/></svg>`;
 }
 
 export function grandCoeur() {
-  return `<svg class="grand-dessin" viewBox="0 0 160 130" width="160" height="130" ${TRAIT} stroke-width="3" aria-hidden="true" focusable="false"><path class="coloriage" d="M80 118C34 86 22 62 22 44a28 28 0 0 1 58-10 28 28 0 0 1 58 10c0 18-12 42-58 74z"/><path d="M84 121C40 90 26 66 25 47"/></svg>`;
+  return `<svg class="grand-dessin coeur" viewBox="0 0 160 130" width="160" height="130" ${TRAIT} stroke-width="3" aria-hidden="true" focusable="false"><path class="coloriage" d="M80 118C34 86 22 62 22 44a28 28 0 0 1 58-10 28 28 0 0 1 58 10c0 18-12 42-58 74z"/><path d="M84 121C40 90 26 66 25 47"/></svg>`;
 }

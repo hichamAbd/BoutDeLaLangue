@@ -133,6 +133,14 @@ export function dateCourte(d) {
   return `${j === 1 ? '1er' : j} ${MOIS[d.getMonth()]}`;
 }
 
+const MOIS_COURTS = ['janv.', 'févr.', 'mars', 'avril', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+
+// « 16 nov. » : pour le tampon
+export function dateTampon(d) {
+  const j = d.getDate();
+  return `${j === 1 ? '1er' : j} ${MOIS_COURTS[d.getMonth()]}`;
+}
+
 /* ---------- Hasard reproductible ---------- */
 
 export function hash32(str) {
