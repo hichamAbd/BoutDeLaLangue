@@ -17,5 +17,6 @@ import sit from './situations.js';
 import tac from './tac.js';
 import mot from './mots.js';
 import fete from './fete.js';
+import p202612 from './paquets/2026-12.js';
 
-export const PAQUETS = [{ conj, gram, orth, voc, fam, usage, oral, expr, faute, ordre, sit, tac, mot, fete }];
+export const PAQUETS = [{ conj, gram, orth, voc, fam, usage, oral, expr, faute, ordre, sit, tac, mot, fete }, p202612];

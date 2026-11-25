@@ -76,6 +76,18 @@ export const ANTISECHE = [
     ],
   },
   {
+    titre: "Souhaiter et remercier",
+    note: "Les petites formules des fêtes et des bonnes nouvelles. Elles servent toute l'année.",
+    phrases: [
+      { f: "Bonnes fêtes de fin d'année !", n: "Convient à tout le monde, quelles que soient ses traditions." },
+      { f: "Je vous souhaite une très belle année.", n: "Les vœux se présentent jusqu'à la fin janvier." },
+      { f: "Meilleurs vœux de bonheur et de santé !" },
+      { f: "Merci, à vous aussi !", n: "Pour rendre un souhait." },
+      { f: "Toutes mes félicitations !", n: "Pour une naissance, un mariage, une réussite." },
+      { f: "Oh, il ne fallait pas ! C'est adorable.", n: "En recevant un cadeau." },
+    ],
+  },
+  {
     titre: "Se reprendre",
     note: "Se corriger en parlant est tout à fait normal. Les personnes dont le français est la langue maternelle le font sans cesse.",
     phrases: [

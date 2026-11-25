@@ -41,6 +41,9 @@ export const ACCUEIL = [
   "les mots, c'est comme le vélo. Ça ne s'oublie pas.",
   "aujourd'hui, une situation de tous les jours et quelques pièges.",
   'je suis content que tu sois là.',
+  "un mot retrouvé, c'est un mot gagné.",
+  'même les mots les plus têtus finissent par revenir.',
+  "aujourd'hui, les pièges sont bien cachés. À toi de les trouver.",
 ];
 
 // Défi commencé mais pas fini.

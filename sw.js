@@ -1,7 +1,7 @@
 // Fonctionnement sans connexion : tous les fichiers de l'appli sont gardés sur le téléphone.
 // À CHAQUE MODIFICATION de l'appli ou du contenu : augmenter VERSION, et ajouter tout nouveau fichier à FICHIERS.
 
-const VERSION = 1;
+const VERSION = 2;
 const CACHE = `boutdelalangue-v${VERSION}`;
 
 const FICHIERS = [
@@ -54,6 +54,7 @@ const FICHIERS = [
   'js/data/tac.js',
   'js/data/mots.js',
   'js/data/fete.js',
+  'js/data/paquets/2026-12.js',
 ];
 
 self.addEventListener('install', (event) => {
